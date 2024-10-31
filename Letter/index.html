@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letter</title>
+    <link rel="stylesheet" href="letter.css">
+  </head>
+  <body>
+    <audio id="backgroundMusic" ></audio>
+    <div class="container">
+      <button id="playButton" class="play-button">Play</button>
+      <div id="newPage" class="new-page hidden">
+        <div class="letter">
+          <h1>
+              I hope i remind you of the color yellow.
+              The color of sunsets and sunrises as new spring beginnings come and go
+              The color of summer sands as it courses through your sun kissed fingers.
+              The color of the autumn leaves asthey crunch beneth your boots.
+              The color of city lights illuminating the snowy winter streets.
+              The color of clarity and loyalty.
+              I hope i remind you of the color yellow, because that's the color that reminds me of you.
+              Your smile is beautiful as a rose, and i hope you can always smile. (✿◡‿◡) 
+          </h1>
+        </div>
+        <div class="rose">
+          <div class="flower">
+              <div class="petal"></div>
+              <div class="petal"></div>
+              <div class="petal"></div>
+              <div class="petal"></div>
+              <div class="petal"></div>
+          </div>
+          <div class="leaf">
+              <div class="stem"></div>
+              <div class="leafs"></div>
+              <div class="leafs"></div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <script>
+      document.getElementById('playButton').addEventListener('click', function() {
+        const playButton = document.getElementById('playButton');
+        const newPage = document.getElementById('newPage');
+    
+        // Hide the play button with a fade-out effect
+        playButton.classList.add('hidden');
+
+        backgroundMusic.play();    
+        // Wait for the button animation to complete before showing the new page
+        setTimeout(() => {
+            newPage.classList.add('visible');
+        }, 300); // Adjust this timing to match the CSS transition duration
+    });
+    
+    </script>
+  </body>
+</html>
